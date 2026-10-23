@@ -1,0 +1,17 @@
+{
+  "timeUtc": "2026-10-23T04:13:13.918Z",
+  "url": "https://livastic-vm5-primary-20260911.github.io/mezo-musd-signal-glass/",
+  "responseStatus": 200,
+  "status": "Live read confirmed · official Mezo network / token / pool checked",
+  "supply": "29482016.98",
+  "pool": "6852.66",
+  "ratio": "0.700215",
+  "block": "Block · #12699327",
+  "h1": "Know the state.\nBefore the transaction.",
+  "errorCount": 1,
+  "errors": [
+    "console Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "noWalletPermissionPrompt": true,
+  "outboundRpcObserved": 12
+}

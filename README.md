@@ -4,6 +4,8 @@ A functioning zero-key, no-wallet static web dashboard that integrates the REAL 
 
 Live site: https://livastic-vm5-primary-20260911.github.io/mezo-musd-signal-glass/
 
+![Actual live Mezo MUSD mainnet explorer in a headless Chrome browser](evidence/live-mezo-musd-desktop-20261023.png)
+
 ## Functional MUSD integration
 
 - Mezo EVM chain ID 31612, official public Mezo RPC https://mezo-mainnet.boar.network, second official network provider only for transient failure fallback. No private API key, wallet or third-party backend.
