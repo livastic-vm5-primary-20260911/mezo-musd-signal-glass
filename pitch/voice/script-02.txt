@@ -1,0 +1,1 @@
+Today, MUSD information is spread across contracts and liquidity pools. Users can confuse total token supply with available liquidity, a pool reserve ratio with a trade quote, or an allowance with confirmed danger. Our app keeps these concepts separate.

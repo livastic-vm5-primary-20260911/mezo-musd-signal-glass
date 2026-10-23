@@ -1,0 +1,1 @@
+Every read checks the Mezo network, expected token and pool contracts, and one selected block. The app verifies decimals, code and pair token order before showing numbers. Wrong-chain or malformed responses produce errors instead of fabricated results. Twenty-five deterministic tests pass.

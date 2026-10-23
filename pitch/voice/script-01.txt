@@ -1,0 +1,1 @@
+This is MUSD Signal Glass, a live open-source, read-only tool for the Mezo ecosystem. It helps people check stablecoin supply, pool balances, and public wallet exposure before making decisions. No wallet connection or transaction is required.

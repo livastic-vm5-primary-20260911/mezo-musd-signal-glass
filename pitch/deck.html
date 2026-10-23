@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MUSD Signal Glass — Mezo Buildathon Wave 1 Pitch</title>
+<style>
+@page{size:1280px 720px;margin:0}*{box-sizing:border-box}
+:root{color-scheme:dark;--bg:#0b1110;--card:#15221d;--lime:#cbff8b;--mint:#9bffc3;--t:#f2f8f1;--muted:#b3c9b6;--line:#3d5641}
+body{margin:0;background:var(--bg);color:var(--t);font-family:"DejaVu Sans",Arial,sans-serif}
+.slide{width:1280px;height:720px;position:relative;overflow:hidden;page-break-after:always;padding:64px 76px;background:radial-gradient(ellipse at 100% 0%,#24563488,transparent 60%),#0b1110}
+.slide:nth-child(2n){background:radial-gradient(ellipse at 0% 100%,#18452c91,transparent 65%),#0b1110}
+.kicker{font-size:14px;letter-spacing:.16em;font-weight:750;color:var(--mint);text-transform:uppercase}
+h1{font-size:75px;letter-spacing:-.062em;line-height:1.07;margin:40px 0 24px}
+h2{font-size:51px;letter-spacing:-.045em;line-height:1.12;margin:25px 0 30px}
+.lede{font-size:24px;line-height:1.5;color:var(--muted);max-width:960px}
+.foot{position:absolute;bottom:35px;left:76px;right:76px;border-top:1px solid #3b5640;padding-top:14px;display:flex;justify-content:space-between;align-items:center;color:#94b398;font-size:13px}
+.number{font-family:monospace;letter-spacing:.12em}
+.lime{color:var(--lime)}.large{font-size:22px;line-height:1.5}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.g3{grid-template-columns:repeat(3,1fr)}
+.card{border:1px solid #365542;background:#14231b;border-radius:18px;padding:28px 30px;min-height:148px}
+.card .title{font-size:24px;font-weight:700;margin-bottom:13px;color:var(--lime)}
+.card p{font-size:19px;color:#c5d9c5;line-height:1.5;margin:0}
+.flow{display:flex;gap:14px;align-items:stretch;margin-top:37px}.flow .card{flex:1;padding:27px 20px}.flow .card .title{font-size:21px}.arrow{display:flex;align-items:center;font-size:33px;color:var(--lime)}
+.screengrid{display:grid;grid-template-columns:440px 1fr;gap:30px;align-items:center}.shot{border:1px solid #678661;border-radius:18px;overflow:hidden;box-shadow:0 18px 60px #000a;height:416px;position:relative;background:#0b1712}.shot img{width:100%;height:100%;object-fit:cover;object-position:top}
+.metric{font-size:53px;font-weight:800;letter-spacing:-.04em;color:var(--lime)}
+.statrow{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:25px 0}.stat{border:1px solid #456345;background:#112119;border-radius:16px;padding:27px}.stat span{font-size:16px;color:#acc4b1}.stat b{display:block;margin-top:17px;font-size:37px}
+.band{border-left:5px solid #b7f880;background:#11251b;padding:22px 29px;border-radius:0 14px 14px 0;color:#c6ddc8;font-size:20px;line-height:1.5}
+.points{padding-left:27px;font-size:22px;line-height:2;color:#d5e6d6}
+.qr{border:1px solid #73985c;border-radius:18px;padding:20px;background:#172b1c;font-size:16px;overflow-wrap:anywhere;line-height:1.4}
+a{color:var(--lime);text-decoration:none}
+.tiny{color:#a3b8aa;font-size:15px;line-height:1.6}.tag{display:inline-block;border:1px solid #6b8d5a;border-radius:999px;color:#ceffc0;padding:9px 16px;margin-right:7px;font-size:17px}
+</style>
+</head>
+<body>
+<section class="slide" id="s1">
+ <div class="kicker">Mezo Buildathon · Wave 1 / Access &amp; Distribution</div>
+ <h1>Know the state.<br><span class="lime">Before the transaction.</span></h1>
+ <p class="lede">MUSD Signal Glass — a public, zero-key Mezo stablecoin and allowance preflight dashboard.</p>
+ <div style="margin-top:45px"><span class="tag">Live deployed app</span><span class="tag">Mainnet MUSD</span><span class="tag">Open-source</span><span class="tag">No wallet access</span></div>
+ <div class="foot"><span>VM5 Delivery Lab · AI-assisted, one human beneficial owner · Unofficial build</span><span class="number">01 / 07</span></div>
+</section>
+<section class="slide" id="s2">
+ <div class="kicker">The user problem</div><h2>MUSD data exists.<br>Understanding it is harder.</h2>
+ <div class="grid">
+  <div class="card"><div class="title">Contract identity</div><p>Which token and chain am I really inspecting?</p></div>
+  <div class="card"><div class="title">Pool reserves</div><p>How much MUSD and mUSDC are visible at a particular block?</p></div>
+  <div class="card"><div class="title">Wallet exposure</div><p>What is a public address's MUSD balance and spender allowance?</p></div>
+  <div class="card"><div class="title">False confidence</div><p>A reserve ratio is not a price oracle or executable swap quote.</p></div>
+ </div>
+ <div class="foot"><span>No invented "safe" badges, price predictions or wallet custody.</span><span class="number">02 / 07</span></div>
+</section>
+<section class="slide" id="s3">
+ <div class="kicker">Already live on a public URL</div><h2>A useful tool, <span class="lime">right now.</span></h2>
+ <div class="screengrid">
+  <div>
+    <p class="large">One click pulls public MUSD token supply and MUSD/mUSDC pool reserves.</p>
+    <p class="large">Enter an optional public address to inspect balance and a specific ERC-20 allowance.</p>
+    <p class="large lime">No Connect Wallet. No approval. No gas.</p>
+  </div>
+  <div class="shot"><img alt="Actual live browser screenshot" src="../evidence/live-mezo-musd-desktop-20261023.png"></div>
+ </div>
+ <div class="foot"><span>https://livastic-vm5-primary-20260911.github.io/mezo-musd-signal-glass/</span><span class="number">03 / 07</span></div>
+</section>
+<section class="slide" id="s4">
+ <div class="kicker">Real Mezo integration</div><h2>Public chain → deterministic evidence</h2>
+ <div class="flow">
+  <div class="card"><div class="title">1 · Pin chain</div><p>eip155:31612<br>Choose a block.</p></div>
+  <div class="arrow">→</div>
+  <div class="card"><div class="title">2 · Verify</div><p>Official token, pair, decimals &amp; bytecode.</p></div>
+  <div class="arrow">→</div>
+  <div class="card"><div class="title">3 · Read</div><p>ERC-20 supply, reserve balances, approvals.</p></div>
+  <div class="arrow">→</div>
+  <div class="card"><div class="title">4 · Explain</div><p>Evidence, source, limits, zero signatures.</p></div>
+ </div>
+ <div style="height:35px"></div>
+ <div class="band">Fail-closed on wrong chain, token, ABI shape or decimals. The RPC method allowlist contains reads only.</div>
+ <div class="foot"><span>Mezo mainnet contract integration · 25 deterministic offline tests passing</span><span class="number">04 / 07</span></div>
+</section>
+<section class="slide" id="s5">
+ <div class="kicker">A verifiable historical block, not a forecast</div><h2>Numbers backed by real reads.</h2>
+ <div class="statrow">
+   <div class="stat"><span>Observed ERC-20 total supply</span><b>29,482,016.98 <small style="font-size:19px">MUSD</small></b></div>
+   <div class="stat"><span>MUSD/mUSDC pool reserve</span><b>6,852.66 <small style="font-size:19px">MUSD</small></b></div>
+   <div class="stat"><span>Paired reserve</span><b>4,798.34 <small style="font-size:19px">mUSDC</small></b></div>
+   <div class="stat"><span>Raw reserve-implied ratio</span><b>0.700215 <small style="font-size:19px">mUSDC/MUSD</small></b></div>
+ </div>
+ <div class="tiny">Pinned Mezo block #12,699,128 (Oct 23, 2026). Token supply is NOT circulating supply. Reserve ratio is NOT a market price, quote, opportunity to arbitrage or peg-safety verdict.</div>
+ <div class="foot"><span>Original public RPC snapshot and reproducible on-chain methods in repository</span><span class="number">05 / 07</span></div>
+</section>
+<section class="slide" id="s6">
+ <div class="kicker">Why it belongs in Access &amp; Distribution</div><h2>Lower the barrier to MUSD.</h2>
+ <ul class="points">
+  <li>Public link — works on any modern browser, no installation.</li>
+  <li>Read-only preflight before touching a wallet or collateral.</li>
+  <li>Explicit MUSD and mUSDC pool integration on Mezo mainnet.</li>
+  <li>Open source + deterministic tests; no hidden private API.</li>
+  <li>Next: documented safety checks for a user-guided MUSD workflow.</li>
+ </ul>
+ <div class="band">Current project: free, no customers and no monetization. Potential next phase is a user-tested developer integration, not a promised revenue stream.</div>
+ <div class="foot"><span>Useful now; roadmap clearly labeled as future work.</span><span class="number">06 / 07</span></div>
+</section>
+<section class="slide" id="s7">
+ <div class="kicker">Live demo · Public source · Reproducible tests</div><h1>Try it.<br><span class="lime">Check the evidence.</span></h1>
+ <div class="qr">
+   <p><strong style="color:var(--mint)">LIVE DEMO</strong><br><a href="https://livastic-vm5-primary-20260911.github.io/mezo-musd-signal-glass/">livastic-vm5-primary-20260911.github.io/mezo-musd-signal-glass/</a></p>
+   <p><strong style="color:var(--mint)">SOURCE + TESTS</strong><br><a href="https://github.com/livastic-vm5-primary-20260911/mezo-musd-signal-glass">github.com/livastic-vm5-primary-20260911/mezo-musd-signal-glass</a></p>
+ </div>
+ <p class="tiny" style="margin-top:26px">Mezo Buildathon entry is subject to platform acceptance and KYB; neither prize nor customer revenue is claimed. Single original human beneficial owner; AI-assisted engineering disclosed.</p>
+ <div class="foot"><span>VM5 Delivery Lab · Oct 23, 2026</span><span class="number">07 / 07</span></div>
+</section>
+</body></html>

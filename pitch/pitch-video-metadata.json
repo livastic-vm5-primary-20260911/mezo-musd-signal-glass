@@ -1,0 +1,49 @@
+{
+  "realOriginalDemoSource": "https://livastic-vm5-primary-20260911.github.io/mezo-musd-signal-glass/",
+  "sourceRepo": "https://github.com/livastic-vm5-primary-20260911/mezo-musd-signal-glass",
+  "output": "MUSD-Signal-Glass-2min-Pitch-20261023.mp4",
+  "videoDurationSeconds": 119.512,
+  "targetDurationSeconds": 119.5,
+  "videoContainsOnlyOwnOriginalScreensAndGraphics": true,
+  "voiceMethod": "locally synthesized English narration from transparently original script",
+  "syntheticEvidencePresentedAsRealPayments": false,
+  "mainnetTransactionsExecuted": 0,
+  "grantAwardClaimed": false,
+  "segments": [
+    {
+      "slide": 1,
+      "segmentDuration": 15.958333,
+      "narrationText": "This is MUSD Signal Glass, a live open-source, read-only tool for the Mezo ecosystem. It helps people check stablecoin supply, pool balances, and public wallet exposure before making decisions. No wallet connection or transaction is required."
+    },
+    {
+      "slide": 2,
+      "segmentDuration": 16.333333,
+      "narrationText": "Today, MUSD information is spread across contracts and liquidity pools. Users can confuse total token supply with available liquidity, a pool reserve ratio with a trade quote, or an allowance with confirmed danger. Our app keeps these concepts separate."
+    },
+    {
+      "slide": 3,
+      "segmentDuration": 16.831995,
+      "narrationText": "Open our published website and it reads real Mezo mainnet data immediately. The dashboard displays total MUSD supply and MUSD-mUSDC pool reserves. Optionally, enter a public wallet address and spender address to inspect MUSD balance and approval, without signing anything."
+    },
+    {
+      "slide": 4,
+      "segmentDuration": 19.208333,
+      "narrationText": "Every read checks the Mezo network, expected token and pool contracts, and one selected block. The app verifies decimals, code and pair token order before showing numbers. Wrong-chain or malformed responses produce errors instead of fabricated results. Twenty-five deterministic tests pass."
+    },
+    {
+      "slide": 5,
+      "segmentDuration": 16.806009,
+      "narrationText": "This example is from Mezo mainnet block twelve million six hundred ninety-nine thousand one hundred twenty-eight. Total supply was about twenty-nine million MUSD, with much smaller reserves in one pool. The reserve ratio is not a trading price or a safe-investment recommendation."
+    },
+    {
+      "slide": 6,
+      "segmentDuration": 17.541667,
+      "narrationText": "The tool targets everyday users, integration developers and agent builders seeking trustworthy context. It is free and requires no signup. Next, we want to offer guided safety checks before MUSD borrowing or token approvals. Those features are planned, not yet shipped."
+    },
+    {
+      "slide": 7,
+      "segmentDuration": 16.809002,
+      "narrationText": "Try the live link, inspect our public GitHub source, and run the tests. This independent, AI-assisted prototype is operated for one human owner. We have no verified Mezo customer sales or prize award. We are submitting working evidence for your evaluation."
+    }
+  ]
+}

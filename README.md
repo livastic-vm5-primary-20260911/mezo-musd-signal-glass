@@ -4,6 +4,16 @@ A functioning zero-key, no-wallet static web dashboard that integrates the REAL 
 
 Live site: https://livastic-vm5-primary-20260911.github.io/mezo-musd-signal-glass/
 
+## Wave 1 pitch materials (evidence, not an award)
+
+- [7-page editable deck source](pitch/deck.html)
+- [7-page PDF project pitch](pitch/MUSD-Signal-Glass-Mezo-Wave1-Pitch-20261023.pdf)
+- [Reproduction instructions, narration scripts, and video metadata](pitch/README.md)
+- [Public release with the original 119-second narrated video](https://github.com/livastic-vm5-primary-20260911/mezo-musd-signal-glass/releases/tag/v1.0.0-wave1-20261023)
+
+Official AKINDO Buildathon participation still requires genuine human contact/KYB information. None of these assets constitutes an accepted submission or a prize.
+
+
 ![Actual live Mezo MUSD mainnet explorer in a headless Chrome browser](evidence/live-mezo-musd-desktop-20261023.png)
 
 ## Functional MUSD integration

@@ -1,0 +1,1 @@
+Open our published website and it reads real Mezo mainnet data immediately. The dashboard displays total MUSD supply and MUSD-mUSDC pool reserves. Optionally, enter a public wallet address and spender address to inspect MUSD balance and approval, without signing anything.
