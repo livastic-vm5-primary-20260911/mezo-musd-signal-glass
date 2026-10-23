@@ -1,0 +1,1 @@
+{"name":"mezo-musd-public-lens","version":"1.0.0","type":"module","description":"Live read-only MUSD Mezo mainnet liquidity and wallet preflight, no wallet connection","scripts":{"test":"node --test"},"license":"MIT"}

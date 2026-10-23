@@ -1,0 +1,13 @@
+{
+  "chainId": 31612,
+  "block": "12699128",
+  "musdAddress": "0xdd468a1ddc392dcdbef6db6e34e89aa338f9f186",
+  "musdcAddress": "0x04671c72aab5ac02a03c1098314b1bb6b560c197",
+  "poolAddress": "0xed812aec0fecc8fd882ac3eccc43f3aa80a6c356",
+  "observedTotalSupply": "29482016.98",
+  "poolMUSD": "6852.66",
+  "poolMUSDC": "4798.34",
+  "poolReserveImpliedMusdcPerMusd": "0.700215",
+  "note": "Read-only public RPC snapshot. Pool reserve ratio excludes price impact, fees and routing; not an oracle, collateral safety assessment, trading signal, executable quote or guarantee.",
+  "source": "https://mezo-mainnet.boar.network"
+}

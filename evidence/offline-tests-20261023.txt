@@ -1,0 +1,164 @@
+
+> mezo-musd-public-lens@1.0.0 test
+> node --test
+
+TAP version 13
+# Subtest: exact official chain, MUSD token, mUSDC and pool addresses pinned
+ok 1 - exact official chain, MUSD token, mUSDC and pool addresses pinned
+  ---
+  duration_ms: 0.725933
+  type: 'test'
+  ...
+# Subtest: valid EVM address canonicalized, invalid refused
+ok 2 - valid EVM address canonicalized, invalid refused
+  ---
+  duration_ms: 0.274395
+  type: 'test'
+  ...
+# Subtest: address ABI encoding zero-left pads
+ok 3 - address ABI encoding zero-left pads
+  ---
+  duration_ms: 0.081064
+  type: 'test'
+  ...
+# Subtest: ABI words malformed rejected
+ok 4 - ABI words malformed rejected
+  ---
+  duration_ms: 0.240376
+  type: 'test'
+  ...
+# Subtest: ABI words decode uint exactly
+ok 5 - ABI words decode uint exactly
+  ---
+  duration_ms: 0.147099
+  type: 'test'
+  ...
+# Subtest: ABI address rejects higher nonzero padding
+ok 6 - ABI address rejects higher nonzero padding
+  ---
+  duration_ms: 0.14085
+  type: 'test'
+  ...
+# Subtest: decimal formatting preserves leading zeros
+ok 7 - decimal formatting preserves leading zeros
+  ---
+  duration_ms: 0.184018
+  type: 'test'
+  ...
+# Subtest: decimal input cannot be float/negative/unreasonable
+ok 8 - decimal input cannot be float/negative/unreasonable
+  ---
+  duration_ms: 0.118539
+  type: 'test'
+  ...
+# Subtest: pool price ratio correct scaling across 6 and 18 decimals
+ok 9 - pool price ratio correct scaling across 6 and 18 decimals
+  ---
+  duration_ms: 0.218671
+  type: 'test'
+  ...
+# Subtest: zero reserves report unknown not zero dollars
+ok 10 - zero reserves report unknown not zero dollars
+  ---
+  duration_ms: 0.245854
+  type: 'test'
+  ...
+# Subtest: reject invalid pool decimals
+ok 11 - reject invalid pool decimals
+  ---
+  duration_ms: 0.116319
+  type: 'test'
+  ...
+# Subtest: decode pool reserves by actual token order
+ok 12 - decode pool reserves by actual token order
+  ---
+  duration_ms: 0.146096
+  type: 'test'
+  ...
+# Subtest: decode pool reserves swapped address order still consistent
+ok 13 - decode pool reserves swapped address order still consistent
+  ---
+  duration_ms: 0.062761
+  type: 'test'
+  ...
+# Subtest: reject fraudulent pool token addresses
+ok 14 - reject fraudulent pool token addresses
+  ---
+  duration_ms: 0.212683
+  type: 'test'
+  ...
+# Subtest: reject same pool tokens
+ok 15 - reject same pool tokens
+  ---
+  duration_ms: 0.074703
+  type: 'test'
+  ...
+# Subtest: preflight accepts only known function selectors
+ok 16 - preflight accepts only known function selectors
+  ---
+  duration_ms: 0.926808
+  type: 'test'
+  ...
+# Subtest: RPC restricts read-only methods
+ok 17 - RPC restricts read-only methods
+  ---
+  duration_ms: 0.397978
+  type: 'test'
+  ...
+# Subtest: RPC restricts hostnames to Mezo public providers
+ok 18 - RPC restricts hostnames to Mezo public providers
+  ---
+  duration_ms: 0.076213
+  type: 'test'
+  ...
+# Subtest: snapshot checks real token identity and yields pool balances
+ok 19 - snapshot checks real token identity and yields pool balances
+  ---
+  duration_ms: 1.01123
+  type: 'test'
+  ...
+# Subtest: optional public wallet balance is read-only
+ok 20 - optional public wallet balance is read-only
+  ---
+  duration_ms: 0.376814
+  type: 'test'
+  ...
+# Subtest: optional spender allowance requires public wallet
+ok 21 - optional spender allowance requires public wallet
+  ---
+  duration_ms: 0.427264
+  type: 'test'
+  ...
+# Subtest: wrong network refused even with token contract correct
+ok 22 - wrong network refused even with token contract correct
+  ---
+  duration_ms: 0.179159
+  type: 'test'
+  ...
+# Subtest: alternative official RPC allowed
+ok 23 - alternative official RPC allowed
+  ---
+  duration_ms: 0.281552
+  type: 'test'
+  ...
+# Subtest: RPC error propagates without inventing balance
+ok 24 - RPC error propagates without inventing balance
+  ---
+  duration_ms: 0.145452
+  type: 'test'
+  ...
+# Subtest: malformed bytecode refused
+ok 25 - malformed bytecode refused
+  ---
+  duration_ms: 0.586889
+  type: 'test'
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 81.918896

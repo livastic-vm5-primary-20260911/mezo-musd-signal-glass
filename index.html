@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Public, read-only MUSD utility on Mezo. Explore actual MUSD supply, MUSD/mUSDC pool reserves and any public wallet balance or ERC-20 allowance. No wallet connection, signing, trading or keys.">
+  <title>MUSD Signal Glass — Mezo Public Data Lens</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./src/app.mjs"></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="./" aria-label="MUSD Signal Glass home">
+      <span class="symbol" aria-hidden="true">◇</span><span>MUSD <b>Signal Glass</b></span>
+    </a>
+    <span class="network"><span class="dot"></span> Mezo Mainnet · 31612</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">OPEN-SOURCE DEFI UTILITY · MEZO / MUSD</div>
+      <h1>Know the state.<br><span class="gradient">Before the transaction.</span></h1>
+      <p class="lede">Inspect real onchain MUSD data with zero wallet permissions. Compare pool reserves, verify a public address balance and review an ERC‑20 allowance. No connect button, no funds, no signatures.</p>
+      <div class="heroActions">
+        <button id="refresh" type="button" class="primary">Read live onchain state <span aria-hidden="true">↗</span></button>
+        <a class="secondary" href="#wallet">Check an address ↓</a>
+      </div>
+      <div class="fine"><strong>Independent prototype.</strong> No MEZO/MUSD payments or trades are performed; this is not an official Mezo product or investment advice.</div>
+    </section>
+
+    <div class="statusline">
+      <div><span id="statusDot" class="statusdot"></span><span id="status" aria-live="polite">Ready. Live reads will query the official Mezo RPC.</span></div>
+      <span id="block" class="monosmall">Block · —</span>
+    </div>
+
+    <section class="metrics" aria-label="Live MUSD data">
+      <article class="metric">
+        <div class="metric-label">MUSD total token supply <span class="hint" title="ERC-20 totalSupply at one pinned block, not circulating supply">?</span></div>
+        <div class="metric-value" id="supply">—</div>
+        <div class="metric-footer">MUSD · on Mezo mainnet</div>
+      </article>
+      <article class="metric">
+        <div class="metric-label">Pool MUSD reserve <span class="hint" title="MUSD portion of the official MUSD/mUSDC pool">?</span></div>
+        <div class="metric-value" id="poolMUSD">—</div>
+        <div class="metric-footer">MUSD/mUSDC contract reserve</div>
+      </article>
+      <article class="metric">
+        <div class="metric-label">Pool mUSDC reserve</div>
+        <div class="metric-value" id="poolMUSDC">—</div>
+        <div class="metric-footer">Read-only · 6 decimals</div>
+      </article>
+      <article class="metric accent">
+        <div class="metric-label">Reserve-implied ratio</div>
+        <div class="metric-value" id="ratio">—</div>
+        <div class="metric-footer">mUSDC / MUSD · not a market price or quote</div>
+      </article>
+    </section>
+
+    <section class="panel" id="wallet">
+      <div class="panel-head">
+        <div>
+          <div class="eyebrow small">ADDRESS PRE-FLIGHT</div>
+          <h2>Check public wallet exposure</h2>
+          <p>Enter any Mezo-compatible <em>public</em> EVM address. Optionally provide a public spender address to view its exact MUSD allowance.</p>
+        </div>
+        <span class="tag">NO WALLET CONNECTION</span>
+      </div>
+      <form id="lookup" autocomplete="off">
+        <label for="walletAddress">Wallet public address <span class="optional">optional</span></label>
+        <input id="walletAddress" name="wallet" type="text" spellcheck="false" placeholder="0x... wallet address (40 hex digits)" autocomplete="off" maxlength="42">
+        <label for="spenderAddress">Spender contract address <span class="optional">only if checking allowance</span></label>
+        <input id="spenderAddress" name="spender" type="text" spellcheck="false" placeholder="0x... allowed spender (optional)" autocomplete="off" maxlength="42">
+        <div class="input-actions">
+          <button type="submit" class="primary sm">Read balance / allowance</button>
+          <button id="clear" type="button" class="textbtn">Clear inputs</button>
+        </div>
+      </form>
+      <div class="walletgrid">
+        <div class="item"><span>Public MUSD balance</span><strong id="balance">—</strong></div>
+        <div class="item"><span>MUSD allowance to spender</span><strong id="allowance">—</strong></div>
+      </div>
+      <p class="disclosure">An allowance above zero is not proof that a spender is malicious. An “unlimited” approval can increase exposure. Confirm the contract's identity and intended permissions independently. No input is saved or sent to this project's servers; RPC requests go directly from your browser to the selected public network provider.</p>
+    </section>
+
+    <section class="links">
+      <div>
+        <div class="eyebrow small">READ DIRECTLY FROM THE CHAIN</div>
+        <h2>Evidence over badges.</h2>
+        <p>Every metric is fetched from a pinned Mezo mainnet block and canonical onchain contracts. There is no price oracle, swap simulation, portfolio tracking, account access, or transaction execution.</p>
+      </div>
+      <div class="contracts">
+        <div><span>MUSD token</span><a target="_blank" rel="noopener noreferrer" href="https://explorer.mezo.org/address/0xdD468A1DDc392dcdbEf6db6e34E89AA338F9F186">0xdD468A1…9F186 ↗</a></div>
+        <div><span>mUSDC token</span><a target="_blank" rel="noopener noreferrer" href="https://explorer.mezo.org/address/0x04671c72aab5ac02a03c1098314b1bb6b560c197">0x04671c7…c197 ↗</a></div>
+        <div><span>MUSD/mUSDC pool</span><a target="_blank" rel="noopener noreferrer" href="https://explorer.mezo.org/address/0xEd812AEc0Fecc8fD882Ac3eccC43f3aA80A6c356">0xEd812AE…6c356 ↗</a></div>
+      </div>
+    </section>
+
+    <section class="footerblock">
+      <div class="eyebrow small">METHODOLOGY & LIMITS</div>
+      <p>This front-end issues allowlisted, read-only JSON-RPC calls for ERC-20 supply, decimals, balanceOf, allowance, and the MUSD/mUSDC pair's token0/token1/getReserves. A mismatched network, token, pair or token decimal causes an error, not a fabricated output. Ratios are computed from reserves and can differ significantly from executable exchange rates due to fees, route, slippage, depegs and stale liquidity. No financial return is suggested.</p>
+      <div class="bottomlinks">
+        <a href="https://mezo.org/docs/users/resources/contracts-reference" target="_blank" rel="noopener noreferrer">Official contract reference ↗</a>
+        <a href="https://mezo.org/docs/developers/features/mezo-pools" target="_blank" rel="noopener noreferrer">Pool documentation ↗</a>
+        <a href="https://github.com/livastic-vm5-primary-20260911/mezo-musd-signal-glass" target="_blank" rel="noopener noreferrer">Source & tests ↗</a>
+      </div>
+      <p class="copyright">© 2026 VM5 Delivery Lab. AI-assisted open-source prototype by one human economic owner. Submitted for independent review; not affiliated with Mezo or AKINDO. No verified product sales or buildathon awards claimed.</p>
+    </section>
+  </main>
+</body>
+</html>
